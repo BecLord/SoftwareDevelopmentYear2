@@ -1,0 +1,37 @@
+USE assignement1;
+
+/* Task 3 (a) */
+
+SELECT customer.custName, carhire.carReg, cardetails.make, cardetails.model, carhire.hireDate, outlet.outletLoc
+FROM carhire
+JOIN customer ON carhire.custNo = customer.custNo
+JOIN cardetails ON carhire.carReg = cardetails.carReg
+JOIN outlet ON carhire.outletNo = outlet.outletNo
+WHERE customer.custNo = 'C100';
+
+
+USE assignement1;
+
+/* Task 3 (b) */
+
+SELECT carhire.custNo, customer.custname, COUNT(*) AS totalHires
+FROM carhire
+JOIN customer ON carhire.custNo = customer.custNo
+GROUP BY custNo, custName;
+
+USE assignement1;
+
+/* Task 3 (c) */
+
+UPDATE cardetails
+SET model = 'Fiesta'
+WHERE carReg = 'M565 0GD'
+
+
+USE assignement1;
+
+/* Task 3 (d) */
+
+DELETE FROM carhire
+WHERE hireDate < '2024/05/16'
+

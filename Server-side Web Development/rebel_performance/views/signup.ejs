@@ -1,0 +1,26 @@
+<%- include('partials/head') %>
+
+<h1><%= title %></h1>
+<div class="content-box">
+<h2>Welcome to Rebel Performance!</h2>
+<p>Please fill in the details to become a member.</p>
+
+  <form action="/members/signup" method="POST">
+    <label for="membershipID">Membership ID:</label>
+    <input type="text" id="membershipID" name="membershipID" required>
+
+    <label for="traineeName">Trainee Name:</label>
+    <input type="text" id="traineeName" name="traineeName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <p>Already a member? <a href="/members/login">Login here</a></p>
+</div>
+<%- include('partials/foot') %>

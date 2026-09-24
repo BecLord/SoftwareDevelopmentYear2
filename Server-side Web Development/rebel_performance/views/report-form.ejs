@@ -1,0 +1,18 @@
+<%- include('partials/head') %>
+
+<h1><%= title %></h1>
+    <form action="/report" method="POST">
+        <label for="traineeName">Trainee Name:</label>
+        <input type="text" id="traineeName" name="traineeName" placeholder="Enter trainee name" required>
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" required>
+
+        <button type="submit">Generate Report</button>
+    </form>
+
+    <%- include('partials/foot') %>  
+

@@ -1,0 +1,58 @@
+{
+    "training_classes": [
+    {
+        "id": 1,
+        "classname": "Yoga",
+        "description": "A calming practice focused on flexibility, balance and mindfulness",
+        "day": "Monday and Thuresday",
+        "time": "18:00",
+        "instructor": "Aine Hart",
+        "price": "€20 for the hour"
+    },
+    {
+        "id": 2,
+        "classname": "High-Intensity Interval Training (HITT)",
+        "description": "An intsense workout that alternates between short bursts of activity and fixed periods of less-intense activity",
+        "day": "Tuesday and Thuresday",
+        "time": "19:00",
+        "instructor": "Adrian Fender",
+        "price": "€15 for the hour"
+    },
+    {
+        "id": 3,
+        "classname": "Spin Class",
+        "description": "A heart-pumping cycling workout that improves cardiovascular fitness",
+        "day": "Wednesday and Friday",
+        "time": "18:00",
+        "instructor":"Aine Hart",
+        "price": "€15 for the hour"
+    },
+    {
+        "id": 4,
+        "classname": "Strength Training",
+        "description": "A comprehensive program designed to build muscle and strength using weights",
+        "day": "Monday, Wednesday and Friday",
+        "time": "19:00",
+        "instructor": "Adrian Fender",
+        "price": "€20 for the hour"
+    },
+    {
+        "id": 5,
+        "classname": "Zumba",
+        "description": "A fun, dance-based workout that combines high-energy music with dance moves",
+        "day": "Friday",
+        "time": "18:00",
+        "instructor":"Aine Hart",
+        "price":"€15 for the hour"
+    },
+    {
+        "id": 6,
+        "classname": "Personal Training",
+        "description": "One-on-one trainng tailored to your specific goals and needs",
+        "day": "By Appointment",
+        "time": "Flexible",
+        "instructor":"Micheal Gallagher",
+        "price": "€300 for a 12 week program"
+    }
+]
+}    

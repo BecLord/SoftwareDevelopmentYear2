@@ -1,0 +1,20 @@
+<%- include('partials/head') %>
+
+<h1><%= title %></h1>
+<p><strong>Trainee Name:</strong> <%= booking.traineeName %></p>
+<p><strong>Membership ID:</strong> <%= booking.membershipID %></p>
+<p><strong>Class Name:</strong> <%= booking.className %></p>
+<p><strong>Training Date:</strong> <%= booking.trainingDate.toDateString() %></p>
+
+<h3>Card Details:</h3>
+<p><strong>Card Number:</strong> <%= booking.cardDetails.cardNumber %></p>
+<p><strong>Expiry Date:</strong> <%= booking.cardDetails.expiryDate %></p>
+<p><strong>Security Code:</strong> <%= booking.cardDetails.securityCode %></p>
+
+<form action="/booking/<%= booking._id %>?_method=DELETE" method="POST">
+  <button type="submit">Delete Booking</button>
+</form>
+
+<a href="/booking/update" data-id="<%= booking._id %>">Edit Booking</a>
+
+<%- include('partials/foot') %>

@@ -1,0 +1,30 @@
+<%- include('partials/head') %>
+
+<h1><%= title %></h1>
+
+    <form action="/booking/new" method="POST">
+        <label for="traineeName">Trainee Name:</label>
+        <input type="text" id="traineeName" name="traineeName" required>
+
+        <label for="membershipID">Membership ID:</label>
+        <input type="text" id="membershipID" name="membershipID" required maxlength="10">
+
+        <label for="className">Class Name:</label>
+        <input type="text" id="className" name="className" required>
+
+        <label for="trainingDate">Training Date:</label>
+        <input type="datetime-local" id="trainingDate" name="trainingDate" required>
+
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required>
+
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="text" id="expiryDate" name="expiryDate" required>
+
+        <label for="securityCode">Security Code:</label>
+        <input type="text" id="securityCode" name="securityCode" required maxlength="3">
+
+        <button type="submit">Create Booking</button>
+    </form>
+    
+    <%- include('partials/foot') %>

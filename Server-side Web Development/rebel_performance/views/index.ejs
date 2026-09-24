@@ -1,0 +1,26 @@
+<%- include('partials/head') %>
+
+<main class="landing">
+    <div class="content-box">
+    <h1><%= title %></h1>
+    <p>Your fitness journey awaits.</p>
+    <p>Sign in or sign up to start booking your next session!</p>
+    <a href="/members/login" class="button">Login</a><br>
+    <a href="/members/signup" class="button">Sign Up</a>
+    </div>
+    <h2>Our Training Sessions</h2>
+    <div class="class-list">
+        <% trainingClasses.forEach(function(training) { %>
+            <div class="class-box">
+                <h3><%= training.classname %></h3>
+                <%= training.description %>
+                <p><strong>Days:</strong> <%= training.day %></p>
+                <p><strong>Time:</strong> <%= training.time %></p>
+                <p><strong>Instructor:</strong> <%= training.instructor %></p>
+                <p><strong>Price:</strong> <%= training.price %></p>
+            </div>
+        <% }); %>
+    </div>
+</main>
+
+<%- include('partials/foot') %>

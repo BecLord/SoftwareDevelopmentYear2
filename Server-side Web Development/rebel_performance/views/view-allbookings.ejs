@@ -1,0 +1,20 @@
+<%- include('partials/head') %>
+
+<h1><%= title %></h1>
+<div class="content-box">
+    <ul>
+        <% bookings.forEach(function(booking) { %>
+            <li>
+                <p><%= booking.traineeName %> (ID: <%= booking.membershipID %>) - Session Date: <%= booking.trainingDate %></p>
+                <br>
+                <form action="/booking/<%= booking._id %>" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+                <br><br>
+                <a href="/booking/update/<%= booking._id %>">Edit Booking</a>
+            </li>
+        <% }); %>
+    </ul>
+</div>
+    <%- include('partials/foot') %>  
+

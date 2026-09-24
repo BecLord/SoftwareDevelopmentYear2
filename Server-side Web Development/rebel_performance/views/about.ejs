@@ -1,0 +1,29 @@
+<%- include('partials/head') %>
+
+<main class="about">
+    <h1><%= title %></h1>
+    <div class="content-box">
+        <p>Your fitness exprerience designed for the modern athlete <br>
+        Whether you;re training to compete or simply improve your health, <br>
+        our team is here to guide you every step of the way.  </p>
+        <p>We offer personalised training sessions, advanced equipment and world class support <br>
+        to help you unlock your true potential.</p>
+        <p>Booking your first session is easy - just fill out our Bookings Form</p>
+        <a href="/booking/new" class="button">Booking Form</a>
+    </div>
+    <h2>Our Training Sessions</h2>
+    <div class="class-list">
+        <% trainingClasses.forEach(function(training) { %>
+            <div class="class-box">
+                <h3><%= training.classname %></h3>
+                <%= training.description %>
+                <p><strong>Days:</strong> <%= training.day %></p>
+                <p><strong>Time:</strong> <%= training.time %></p>
+                <p><strong>Instructor:</strong> <%= training.instructor %></p>
+                <p><strong>Price:</strong> <%= training.price %></p>
+            </div>
+        <% }); %>
+    </div>
+</main>
+
+<%- include('partials/foot') %>

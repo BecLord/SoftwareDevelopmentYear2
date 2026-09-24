@@ -1,0 +1,17 @@
+<%- include('partials/head') %> 
+
+<h1><%= title %></h1> 
+<div class="content-box">
+<h2>Welcome back!</h2>
+<p>Please enter your membershipID to access your profile.</p>
+
+<form action="/members/login" method="POST">
+  <label for="membershipID">Membership ID:</label>
+  <input type="text" id="membershipID" name="membershipID" required>
+
+  <button type="submit">Login</button>
+</form>
+
+<p>Don't have an account? <a href="/members/signup">Sign up here</a></p>
+</div>
+<%- include('partials/foot') %>

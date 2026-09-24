@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+<h1><%= title %></h1>
+<div class="content-box">
+<main class="member-profile">
+<h2>Welcome, <%= member.traineeName %></h2>
+<p><strong>Membership ID: </strong><%= member.membershipID %></p>
+<p><strong>Email: </strong><%= member.email %></p>
+<p><strong>Phone Number: </strong><%= member.phoneNumber %></p>
+
+<a href="/booking/new">Create a New Booking</a>
+
+<a href="/logout">Logout</a>
+</div>
+</main>
+
+<%- include('partials/foot') %>

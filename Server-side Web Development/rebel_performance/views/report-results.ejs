@@ -1,0 +1,36 @@
+<%- include('partials/head') %>
+
+<h1><%= title %></h1>
+<div class="content-box">
+    <p>Showing sessions between <%= startDate %> and <%= endDate %></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Trainee Name</th>
+                <th>Sessions Attended</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (const trainee in reportData) { %>
+                <tr>
+                    <td><%= trainee %></td>
+                    <td>
+                        <ul>
+                            <% reportData[trainee].forEach(function(session) { %> <!-- Loop through sessions for each trainee -->
+                                <li>
+                                    <%= session.trainingDate.toDateString() %> - 
+                                    <%= session.className %>
+                                </li>
+                            <% }) %>
+                        </ul>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <a href="/report">Back to Report Form</a>
+</div>
+
+<%- include('partials/foot') %>
